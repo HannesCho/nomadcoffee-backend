@@ -11,4 +11,8 @@ export default {
     updateCoffee: (_, { id, title }) =>
       client.coffee.update({ where: { id }, data: { title } }),
   },
+  Query: {
+    coffees: () => client.coffee.findMany(),
+    coffee: (_, { id }) => client.coffee.findUnique({ where: { id } }),
+  },
 };

@@ -22,8 +22,8 @@ model User {
   username       String   @unique
   email          String   @unique
   name           String
-  location       String?
   password       String
+  bio            String?
   avatarURL      String?
   githubUsername String?  @unique
   createdAt      DateTime @default(now())

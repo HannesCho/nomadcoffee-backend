@@ -1,8 +1,9 @@
 {
   "name": "instacoffee",
   "version": "1.0.0",
-  "description": "Day 1-2",
+  "description": "GraphQL and React Native Challenge from Nomad Coders",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "nodemon --exec babel-node server",
     "migrate": "npx prisma migrate dev --preview-feature",
     "studio": "npx prisma studio"
@@ -22,10 +23,15 @@
     "@graphql-tools/schema": "^8.3.1",
     "@prisma/client": "^3.6.0",
     "apollo-server": "^2.25.2",
+    "apollo-server-express": "^3.5.0",
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "graphql": "^15.7.2",
-    "graphql-tools": "^8.2.0"
+    "graphql-tools": "^8.2.0",
+    "graphql-upload": "^13.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -33,5 +39,9 @@
     "@babel/preset-env": "^7.16.4",
     "nodemon": "^2.0.15",
     "prisma": "^3.6.0"
+  },
+  "resolutions": {
+    "fs-capacitor": "^6.2.0",
+    "graphql-upload": "^11.0.0"
   }
 }
