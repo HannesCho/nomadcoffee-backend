@@ -9,6 +9,8 @@ type User{
     bio: String
     avatarURL: String
     githubUsername: String
+    following(lastId: Int): [User]
+    followers(lastId: Int): [User]
     createdAt: String!
     updatedAt: String!
 }`;
