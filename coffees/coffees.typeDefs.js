@@ -7,13 +7,32 @@ export default gql`
     createdAt: String!
     updatedAt: String!
   }
-  type Query {
-    coffees: [Coffee]
-    coffee(id: Int!): Coffee
+  type CoffeeShop {
+    id: Int!
+    name: String!
+    latitude: String
+    longitude: String
+    user: User!
+    photos: [CoffeeShopPhoto]
+    categories: [Category]
+    created_at: String!
+    updated_at: String!
   }
-  type Mutation {
-    createCoffee(title: String!): Coffee
-    deleteCoffee(id: Int!): Coffee
-    updateCoffee(id: Int!, title: String!): Coffee
+  type Category {
+    id: Int!
+    name: String!
+    slug: String!
+    shops: [CoffeeShop]
+    total_shops: Int!
+    created_at: String!
+    updated_at: String!
+  }
+  type CoffeeShopPhoto {
+    id: Int!
+    url: String!
+    shop: CoffeeShop
+    shop_id: String
+    created_at: String!
+    updated_at: String!
   }
 `;

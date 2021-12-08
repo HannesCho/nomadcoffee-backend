@@ -6,7 +6,7 @@ import { GraphQLUpload } from "graphql-upload";
 
 const resolverFn = async (
   _,
-  { username, email, name, password: newPassword, location, avatarURL },
+  { username, email, name, password: newPassword, bio, avatarURL },
   { loggedInUser }
 ) => {
   let avatar = null;
@@ -36,7 +36,7 @@ const resolverFn = async (
       email,
       name,
       ...(uglyPassword && { password: uglyPassword }),
-      location,
+      bio,
       ...(avatar && { avatarURL: avatar }),
     },
   });
