@@ -26,6 +26,7 @@ async function startServer() {
   // This middleware should be added before calling `applyMiddleware`.
   app.use(logger("tiny"));
   server.applyMiddleware({ app });
+  app.use(graphqlUploadExpress());
   app.use("/static", express.static("uploads"));
 
 
