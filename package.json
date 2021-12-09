@@ -31,7 +31,7 @@
     "graphql-tools": "^7.0.5",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
-    "graphql-upload": "^11.0.0"
+    "graphql-upload": "^13.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -43,6 +43,6 @@
   },
   "resolutions": {
     "fs-capacitor": "^6.2.0",
-    "graphql-upload": "^11.0.0"
+    "graphql-upload": "^13.0.0"
   }
 }

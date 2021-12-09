@@ -121,7 +121,3 @@ dist
 /build
 
 /nomadcoffeeshop-backend-heroku
-
-package-lock.json
-
-prisma/dev.db
