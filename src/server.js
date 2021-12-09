@@ -10,8 +10,8 @@ async function startServer() {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    introspection: true,
     playground: true,
+    introspection: true,
     context: async ({ req }) => {
       return {
         loggedInUser: await getUser(req.headers.token),
@@ -28,7 +28,6 @@ async function startServer() {
   server.applyMiddleware({ app });
   app.use(graphqlUploadExpress());
   app.use("/static", express.static("uploads"));
-
 
   await new Promise(r => app.listen({ port: 4000 }, r));
 
