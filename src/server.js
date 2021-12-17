@@ -25,10 +25,11 @@ async function startServer() {
   // This middleware should be added before calling `applyMiddleware`.
   app.use(logger("tiny"));
   server.applyMiddleware({ app });
+console.log(server.graphqlPath)
+const PORT = process.env.PORT || 4000;
+  await new Promise(r => app.listen({ port: PORT }, r));
 
-  await new Promise(r => app.listen({ port: 4000 }, r));
-
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+  console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`);
 }
 
 startServer();
