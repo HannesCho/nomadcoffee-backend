@@ -1,6 +1,9 @@
 {
   "name": "instacoffee",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.13.1"
+  },
   "description": "GraphQL and React Native Challenge from Nomad Coders",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
@@ -31,6 +34,7 @@
     "graphql": "^15.8.0",
     "graphql-tools": "^7.0.2",
     "graphql-upload": "^11.0.0",
+    "fs-capacitor": "^6.2.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0"
   },
