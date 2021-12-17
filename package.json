@@ -30,7 +30,7 @@
     "express": "^4.17.1",
     "graphql": "^15.8.0",
     "graphql-tools": "^7.0.2",
-    "graphql-upload": "^13.0.0",
+    "graphql-upload": "^11.0.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0"
   },
