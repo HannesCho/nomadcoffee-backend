@@ -1,7 +1,6 @@
 require("dotenv").config();
 import {ApolloServer} from "apollo-server-express"
 import express from "express"
-import { graphqlUploadExpress } from "graphql-upload";
 import logger from "morgan";
 import { typeDefs, resolvers } from "./schema";
 import { getUser } from "./users/users.utils";
@@ -26,8 +25,6 @@ async function startServer() {
   // This middleware should be added before calling `applyMiddleware`.
   app.use(logger("tiny"));
   server.applyMiddleware({ app });
-  app.use(graphqlUploadExpress());
-  app.use("/static", express.static("uploads"));
 
   await new Promise(r => app.listen({ port: 4000 }, r));
 

@@ -1,9 +1,6 @@
 {
   "name": "instacoffee",
   "version": "1.0.0",
-  "engines": {
-    "node": "16.13.1"
-  },
   "description": "GraphQL and React Native Challenge from Nomad Coders",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
@@ -33,7 +30,6 @@
     "express": "^4.17.1",
     "graphql": "^15.8.0",
     "graphql-tools": "^7.0.2",
-    "graphql-upload": "^11.0.0",
     "fs-capacitor": "^6.2.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0"
@@ -46,9 +42,5 @@
     "@babel/preset-env": "^7.12.11",
     "nodemon": "^2.0.7",
     "prisma": "^2.16.1"
-  },
-  "resolutions": {
-    "fs-capacitor": "^6.2.0",
-    "graphql-upload": "^11.0.0"
   }
 }
