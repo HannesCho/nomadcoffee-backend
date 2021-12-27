@@ -2,19 +2,16 @@ import { gql } from "apollo-server";
 
 export default gql`
   scalar Upload
-  type EditCoffeeShopResult {
+  type CreateCoffeeShopResult {
     ok: Boolean!
     error: String
   }
 
   type Mutation {
-    editCoffeeShop(
-      id: Int!
-      name: String
-      latitude: String
-      longitude: String
+    createCoffeeShop(
+      name: String!
       files: Upload
       category: String
-    ): EditCoffeeShopResult!
+    ): CreateCoffeeShopResult!
   }
 `;

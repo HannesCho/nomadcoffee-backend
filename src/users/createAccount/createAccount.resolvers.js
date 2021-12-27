@@ -1,7 +1,9 @@
 import client from "../../client";
 import bcrypt from "bcrypt";
+import { GraphQLUpload } from "graphql-upload";
 
 export default {
+  Upload: GraphQLUpload,
   Mutation: {
     createAccount: async (
       _,
@@ -11,11 +13,12 @@ export default {
         name,
         password,
         bio = null,
-        avatarURL = null,
+        avatar = null,
         githubUsername = null,
       }
     ) => {
       try {
+        console.log("creatAccount");
         // check if username or email is already on DB.
         const existingUser = await client.user.findFirst({
           where: {
@@ -43,7 +46,7 @@ export default {
             name,
             password: uglyPassword,
             bio,
-            avatarURL,
+            avatar,
             githubUsername,
           },
         });

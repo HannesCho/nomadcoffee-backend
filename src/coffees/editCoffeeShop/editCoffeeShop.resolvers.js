@@ -5,8 +5,10 @@ import {
   filesHandler,
   extractFilesUrl,
 } from "../coffees.utils";
+import { GraphQLUpload } from "graphql-upload";
 
 export default {
+  Upload: GraphQLUpload,
   Mutation: {
     editCoffeeShop: protectedResolver(
       async (
@@ -79,4 +81,4 @@ export default {
       }
     ),
   },
-}; 
+};
