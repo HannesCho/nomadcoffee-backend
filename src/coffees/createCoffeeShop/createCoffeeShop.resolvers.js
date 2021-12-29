@@ -27,7 +27,7 @@ export default {
             data: {
               user: {
                 connect: {
-                  user_id: loggedInUser.id,
+                  id: loggedInUser.id,
                 },
               },
               name,

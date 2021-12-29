@@ -12,7 +12,6 @@ export default gql`
       email: String!
       name: String!
       password: String!
-      location: String
       avatar: Upload
       githubUsername: String
     ): CreateAccountResult!
